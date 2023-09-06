@@ -1,0 +1,78 @@
+@import "./../utils/varaible";
+
+header {
+  padding-top: 43px;
+  padding-bottom: 38px;
+  width: 100%;
+  background-color: $first_bgColor;
+  z-index: 9999;
+  position: relative;
+  .mobile-menu{
+    position: fixed;
+    right: -100%;
+    top: 110px;
+    height: 100vh;
+    width: 100%;
+    padding: 70px 0;
+    background-color: $second_bgColor;
+    transition: .7s;
+    z-index: 9999;
+    ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      li{
+        a{
+          color: $font-color;  
+          font-family: Montserrat;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+      }
+    }
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav {
+    ul {
+      display: flex;
+      gap: 60px;
+      li {
+        a {
+          color: $font-color;  
+          font-family: Montserrat;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+      }
+    }
+  }
+  #hamburger-menu{
+    display: none;
+    font-size: 32px;
+  }
+  @media(max-width: 1024px){
+    .container{
+      padding: 0 30px;
+    }
+  }
+  @media(max-width: 768px){
+    .container{
+      nav{
+        display: none;
+      }
+    }
+    #hamburger-menu{
+      display: block;
+    }
+  }
+}

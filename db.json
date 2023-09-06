@@ -1,0 +1,39 @@
+{
+  "range": [
+    {
+      "id": "c2f393e2-175c-431e-9c31-f42a6d8b628e",
+      "name": "Dining",
+      "image": "https://cdn.pixabay.com/photo/2015/05/31/14/24/wooden-791941_640.jpg"
+    },
+    {
+      "id": "5287eb0b-38a6-4f3a-87c6-2aa081222fa4",
+      "name": "Living",
+      "image": "https://cdn.pixabay.com/photo/2018/02/19/07/53/living-room-3164434_640.jpg"
+    },
+    {
+      "id": "1f4be7d6-a0bb-4a79-9586-349b4d16a949",
+      "name": "Bedroom",
+      "image": "https://cdn.pixabay.com/photo/2021/11/08/00/30/bedroom-6778199_640.jpg"
+    }
+  ],
+  "works": [
+    {
+      "id": "0857f9c8-ab42-4735-92f9-9972a8660fce",
+      "name": "Purchase Securely",
+      "image": "https://cdn.pixabay.com/photo/2017/08/02/01/11/people-2569404_640.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "id": "9447d4ea-7168-4689-b0d8-3c7222a27c9f",
+      "name": "Ships From Warehouse",
+      "image": "https://cdn.pixabay.com/photo/2021/02/02/14/35/hamburg-5974226_640.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "id": "4e30e01a-3467-4296-b451-49302ca171cf",
+      "name": "Style Your Room",
+      "image": "https://cdn.pixabay.com/photo/2021/11/28/11/54/furniture-6830009_640.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }
+  ]
+}

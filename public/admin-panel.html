@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css"
+    rel="stylesheet"
+  />
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"
+  ></script>
+  <link rel="stylesheet" href="@sweetalert2/themes/dark/dark.css" />
+  <script defer src="sweetalert2/dist/sweetalert2.min.js"></script>
+</head>
+<body>
+  <div class="d-flex align-items-end justify-content-end px-2 mt-4">
+    <a href="index.html" target="_blank" type="button" class="btn btn-primary"
+    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+GO HOME
+</a>
+</div>
+
+<div id="range-section" class="container d-flex flex-column gap-5 justify-content-center align-items-center mt-5">
+    <table id="range" class="table">
+        <div class="modal" id="rooms-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Rooms</h5>
+                  <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-default">Image</span>
+                        </div>
+                        <input type="text" name="room-image" id="room-image" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                      </div>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+                        </div>
+                        <input name="room-name" id="room-name" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                      </div>
+                </div>
+                
+                <div class="modal-footer">
+                    <button id="save_range" class="btn btn-primary room-save-btn">Save</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="container mt-5">
+         
+            <div class="d-flex justify-content-end mt-4 ">
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#rooms-modal">Add Rooms</button>
+            </div>
+        <thead class="table-dark">
+        <tr  >
+                
+                <th scope="col">ImageUrl</th>
+                <th scope="col">Name</th>
+                <th scope="col"></th>
+              </tr>
+        </thead>
+        <tbody class="range-body ">
+          
+        </tbody>
+      </table>
+   
+</div>
+<div id="works-section" class="container d-flex flex-column gap-5 justify-content-center align-items-center mt-5">
+    <table id="works" class="table">
+        <div class="modal" id="rooms-modal2" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Rooms</h5>
+                  <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-default">Image</span>
+                        </div>
+                        <input type="text" name="room-image" id="works-image" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                      </div>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+                        </div>
+                        <input name="room-name" id="works-name" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                      </div>
+                      <div class="input-group ">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
+                        </div>
+                        <input name="works-description" id="works-description" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                      </div>
+                      
+                </div>
+                
+                <div  class="modal-footer">
+                    <button id="save-works" class="btn btn-primary room-save-btn">Save</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="container mt-5">
+         
+            <div class="d-flex justify-content-end mt-4 ">
+              <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#rooms-modal2">Add Rooms</button>
+            </div>
+        <thead class="table-dark">
+        <tr>
+                <th scope="col">id</th>
+                <th scope="col">ImageUrl</th>
+                <th scope="col">Name</th>
+                <th scope="col">Delete</th>
+              </tr>
+        </thead>
+        <tbody class="works-body">
+          
+        </tbody>
+      </table>
+</div>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../src/js/adminPanel.js"></script>
+</body>
+</html>

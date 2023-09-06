@@ -1,0 +1,690 @@
+@import "./utils/varaible";
+
+@import "./layout/header";
+@import "./layout/footer";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+}
+.container {
+  padding: 0 120px;
+}
+body{
+  overflow-x: hidden;
+}
+//Banner section style start
+#banner {
+  background-image: url("../images/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  padding: 151px 0;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 90px;
+  .card {
+    width: 643px;
+    height: auto;
+    border-radius: 10px;
+    background-color: $second_bgColor;
+    padding: 37px 58px 41px 39px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    p {
+      color: $font-color;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: 3px;
+    }
+    h1 {
+      color: $primary-color;
+      font-family: Montserrat;
+      font-size: 52px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 65px; /* 125% */
+      width: 88%;
+    }
+    span {
+      color: $font-color;
+      font-family: Montserrat;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 39px;
+    }
+    button {
+      margin-top: 10px;
+      width: 200px;
+      height: 55px;
+      text-align: center;
+      border-radius: 50px;
+      background-color: $primary-color;
+      color: $default_color;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+      transition: 0.5s;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.07);
+        background-color: $first_bgColor;
+        color: $primary-color;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  #banner {
+    justify-content: center !important;
+    padding: 151px 10px;
+  }
+}
+@media (max-width: 480px) {
+  .card {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px !important;
+    h1 {
+      font-size: 32px !important;
+      width: 100% !important;
+      line-height: 45px !important;
+    }
+    span {
+      font-size: 14px !important;
+      line-height: 30px !important;
+    }
+    button {
+      font-size: 12px !important;
+      width: 150px !important;
+      height: 40px !important;
+    }
+  }
+}
+//Banner section style end
+
+//Service section style start
+#service {
+  background-color: $second_bgColor;
+  padding: 50px 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    figure {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 27px;
+      .service-content {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+  }
+  @media (max-width: 480px) {
+    .container {
+      padding: 0 30px;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}
+//Service section style end
+
+//Collection section style start
+#collection {
+  padding: 60px 0;
+  text-align: center;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    .collection-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h2 {
+        color: $font-color;
+        font-family: Montserrat;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      span {
+        color: $font-color-1;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+    .collection-cards {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      &--card {
+        cursor: pointer;
+        transition: 0.5s;
+        position: relative;
+        .first {
+          border-top-left-radius: 80px;
+        }
+        .third {
+          border-bottom-right-radius: 80px;
+        }
+        img {
+          width: 300px;
+          height: 400px;
+          object-fit: cover;
+          transition: 0.5s;
+        }
+        &:hover {
+          img {
+            border-radius: 0;
+            transform: translate(0, -30px);
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  #collection {
+    .container {
+      padding: 0 30px !important;
+      h2 {
+        font-size: 24px !important;
+      }
+      span {
+        font-size: 14px !important;
+      }
+      img {
+        width: 240px !important;
+      }
+    }
+  }
+}
+//Collection section style end
+
+//Blog section style start
+#blog {
+  background-color: $second_bgColor;
+
+  padding: 60px 0;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .blog-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      gap: 20.09px;
+      h2 {
+        color: $font-color;
+        font-family: Montserrat;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      span {
+        display: inline-block;
+        color: $font-color-1;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 39px; /* 195% */
+        width: 63%;
+      }
+      button {
+        margin-top: 10.05px;
+        padding: 24px 57px;
+        border-radius: 50px;
+        background-color: $primary-color;
+        color: $default_color;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+          background-color: $first_bgColor;
+          color: $primary-color;
+          transform: scale(1.04);
+        }
+      }
+    }
+    figure {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .person {
+        width: 500px;
+        height: 754px;
+        object-fit: cover;
+        border-top-left-radius: 60px;
+        border-bottom-right-radius: 10px;
+        position: relative;
+        z-index: 1000;
+      }
+      .ellipse {
+        width: 372px;
+        height: 373.71px;
+        object-fit: contain;
+        position: absolute;
+        right: -12%;
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  #blog {
+    .container {
+      padding: 0 70px;
+      gap: 50px;
+      flex-wrap: wrap;
+      .person {
+        width: 350px !important;
+        height: 500px !important;
+      }
+      .ellipse {
+        display: none;
+      }
+      .blog-content {
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  #blog {
+    .container {
+      h2 {
+        font-size: 24px !important;
+      }
+      span {
+        font-size: 14px !important;
+        width: 100% !important;
+        line-height: 25px !important;
+      }
+      button {
+        padding: 15px 30px !important;
+        font-size: 10px !important;
+      }
+      .person {
+        width: 240px !important;
+        height: 350px !important;
+      }
+    }
+  }
+}
+//Blog section style end
+
+//Range section style start
+#range {
+  padding: 60px 0;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 36px;
+    .range-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      h2 {
+        color: $font-color;
+        font-family: Montserrat;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      span {
+        color: $font-color-1;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+    .range-cards {
+      display: flex;
+      gap: 19.39px;
+      flex-wrap: wrap;
+      .card {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        figure {
+          img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+          }
+        }
+      }
+      h4 {
+        color: $font-color;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  #range {
+    .container {
+      padding: 0 30px !important;
+    }
+  }
+  .range-cards {
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 480px) {
+  #range {
+    .container {
+      img {
+        width: 240px !important;
+      }
+      h2 {
+        font-size: 24px !important;
+      }
+      span {
+        font-size: 14px !important;
+      }
+      h4 {
+        font-size: 20px !important;
+      }
+    }
+    .card {
+      padding: 30px 0px !important;
+    }
+  }
+}
+//Range section style end
+
+//Works section style start
+#works {
+  padding: 60px 0;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    .works-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h2 {
+        color: $font-color;
+        font-family: Montserrat;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      span {
+        color: $font-color-1;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+    .works-cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+
+      .works-card {
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+        figure {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          .main-img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+          }
+          .group {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            bottom: -8%;
+          }
+        }
+        .text {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+          h4 {
+            color: $font-color;
+            font-family: Montserrat;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          }
+          span {
+            color: $font-color-1;
+            text-align: center;
+            font-family: Montserrat;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+@media(max-width:480px){
+    #works{
+        .container{
+            padding: 0 30px;
+            .works-cards{
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            h2{
+                font-size:  24px !important;
+            }
+            span{
+                font-size: 14px !important;
+            }
+            h4{
+                font-size: 20px !important;
+            }
+            .main-img{
+                width: 240px !important;
+            }
+            .text{
+                width: 240px !important;
+            }
+        }
+    }
+}
+//Works section style end
+
+//Contact section style start
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 0;
+  background-color: $second_bgColor;
+  gap: 50px;
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    h2 {
+      color: $font-color;
+      text-align: center;
+      font-family: Montserrat;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    span {
+      display: inline-block;
+      color: $font-color-1;
+      text-align: center;
+      font-family: Montserrat;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 39px; /* 195% */
+      width: 60%;
+    }
+  }
+  .contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input {
+      width: 333px;
+      height: 70px;
+      padding-left: 10px;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+      &::placeholder {
+        color: #011c42;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 0.30000001192092896;
+      }
+    }
+
+    button {
+      width: 153px;
+      height: 70px;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      border: 1px solid #011c42;
+      background-color: $primary-color;
+      color: $default_color;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      cursor: pointer;
+      transition: 0.5s;
+      &:hover {
+        background-color: $first_bgColor;
+        color: $primary-color;
+        transform: scale(1.02);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #contact {
+    input {
+      width: 250px !important;
+    }
+    button {
+      width: 100px !important;
+    }
+  }
+}
+@media (max-width: 480px) {
+  #contact {
+    h2 {
+      font-size: 24px !important;
+    }
+    span {
+      font-size: 14px !important;
+      line-height: 25px !important;
+      width: 100% !important;
+    }
+    input {
+      width: 150px !important;
+      height: 55px !important;
+      &::placeholder {
+        font-size: 12px !important;
+      }
+    }
+    button {
+      width: 70px !important;
+      height: 55px !important;
+      font-size: 10px !important;
+    }
+  }
+}
+//Contact section style end
